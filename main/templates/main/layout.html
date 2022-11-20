@@ -1,0 +1,15 @@
+{%load static%}
+<!DOCTYPE html>
+<link type="text/css" href="{% static 'main/css.css' %}" rel="stylesheet" />
+<html lang="ru">
+<head>
+</head>
+<body>
+    <div class="menu">
+        <a href = "{% url 'main' %}">Фоурм</a>
+        <a href = "{% url 'write' %}">Написать</a>
+    </div
+    {%block content%}
+    {%endblock%}
+</body>
+</html>
