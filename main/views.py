@@ -1,13 +1,13 @@
 from django.urls import reverse_lazy
 from django.views.generic import CreateView
 from django.views.generic import ListView
-
+from django.shortcuts import render
 from .forms import Articles_forms
 from .models import Articles
 
 
-# def test (request):
-#     return render(request ,'main/test.html')
+def test (request):
+    return render (request ,'main/register/register.html')
 
 
 class main(ListView):

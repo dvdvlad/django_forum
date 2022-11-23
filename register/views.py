@@ -15,5 +15,3 @@ class Register(View):
             'form': UserCreationForm()
         }
         return render(request, self.template_name, context)
-    
-    pass
