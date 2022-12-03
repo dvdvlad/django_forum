@@ -6,5 +6,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('main.urls')),
     path('reg/',include("register.urls")),
-    path('test/',include("main.urls")),
+#    path('test/',include("main.urls")),
 ]

@@ -4,4 +4,4 @@ from django.db import models
 
 
 class Custom_user(User):
-        favorites = models.SlugField('Избраное')
+        favorites = models.SlugField('Избраное', default='')

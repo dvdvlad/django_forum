@@ -8,7 +8,8 @@
     <div class="menu">
         <a href = "{% url 'main' %}">Фоурм</a>
         <a href = "{% url 'write' %}">Написать</a>
-    </div
+    </div>
+    {% csrf_token %}
     {%block content%}
     {%endblock%}
 </body>

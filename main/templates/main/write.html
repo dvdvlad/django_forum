@@ -1,10 +1,12 @@
-{%extends 'main/layout.html'%}
+{%extends 'Main/layout.html'%}
 {%load static%}
 {% block content %}
-    <form method="post" action="{% url "main" %}" >
-        {%csrf_token%}
-        {{form.articles}}<br>
-        {{form.text}}<br>
-        <button type="submit">Отправить</button>
-    </form>
+<form method="post" action="{% url 'write'%}">
+       <div class="textarea">
+            {% csrf_token %}
+           {{form.articles}}</br>
+           {{form.text}}</br>
+           <button class="butonsend" type="submit">Отправить</button>
+       </div>
+</form>
 {%endblock%}
