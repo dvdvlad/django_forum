@@ -6,12 +6,16 @@
 </head>
 <body>
     <div class="menu">
-        <a href = "{% url 'main' %}">Фоурм</a>
-        <a href = "{% url 'write' %}">Написать</a>
-        {% if user.is_authenticated %}
-            <h1>Test</h1>
-        {% else %}
-            
+        <ul class="menu_ul">
+            <li><a href = "{% url 'main' %}", class="menu_li">Фоурм</a></li>
+            <li><a href = "{% url 'write' %}". class="menu_li">Написать</a></li>
+            {% if user.is_authenticated %}
+                <li><a href="{% url 'logout' %}", class="menu_li">Выйти</a></li>
+                <li><p class="menu_li">{{ request.user.username }}</p></li>
+            {% else %}
+                <li><a href = "{% url 'register' %}", class="menu_li">Зарегистрироваться</a></li>
+                <li><a href = "{% url 'login' %}", class="menu_li">Войти</a></li>
+        </ul>
         {% endif %}
     </div>
     {% csrf_token %}

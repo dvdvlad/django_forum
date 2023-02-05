@@ -2,15 +2,14 @@
 {%load static%}
 {% block content %}
     <div class="login">
-        <input placeholder="login",class="input_login">
-        <input placeholder="password", class="input_login">
-        <button type="sumbit", class='test'>Войти</button>
+        <form method="post">{% csrf_token %}
+            {{form.username}}
+            {{form.password}}
+            <button type="sumbit", class='test'>Войти</button>
+        </form>
     </div>
 {% endblock%}
 <style>
-body {
-    background-color: black;
-}
 .test{
     border-radius: 10px;
 }
